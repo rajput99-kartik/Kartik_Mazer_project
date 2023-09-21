@@ -1,0 +1,4 @@
+[12-Nov-2022 14:56:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/crmon1vv/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/crmon1vv/public_html/config/cache.php on line 18

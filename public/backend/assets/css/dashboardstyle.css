@@ -1,0 +1,117 @@
+
+	div#loadchartdata div#carrier_table_wrapper, div#loadfull_wrapper {
+    	display: none;
+	}
+	path.highcharts-grid-line {
+    	display: none;
+	}
+	path.highcharts-area {
+	    fill:  #2dce89 !important;
+	}
+    
+	/* for progress bar show approve or disapproved data start */
+
+        @keyframes growProgressBar {
+            0%, 33% { --pgPercentage: 0; }
+            100% { --pgPercentage: var(--value); }
+        }
+        
+        @property --pgPercentage {
+            syntax: '<number>';
+            inherits: false;
+            initial-value: 0;
+        }
+  
+    	
+			div[role="progressbar"] {
+		--size: 9rem;
+		--fg: #1e55bf;
+		--bg: #def;
+		--pgPercentage: var(--value);
+		animation: growProgressBar 6s 1 forwards;
+		width: var(--size);
+		height: var(--size);
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		background: 
+			radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+			conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+			;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: calc(var(--size) / 5);
+		color: var(--fg);
+		margin:auto;
+		padding-top: 38px;
+		}
+
+		div[role="progressbar"]::after {
+		counter-reset: percentage var(--value);
+		content: counter(percentage) '%';
+		}
+		.progressbar h4 {
+            font-size: 14px;
+            color: #1e55bf;
+            font-weight: 100;
+		}
+		.progressbar p {
+            font-size: 14px;
+            color: #e64c0f;
+            padding-top: 33px;
+        }
+		.progressbar {
+			display: block !important;
+			text-align: center;
+			padding-top: 70px;
+			position: relative;
+		}
+		.progressbar:after {
+            position: absolute;
+            bottom: 43px;
+            left: 0;
+            right: 0;
+            font-size: 33px;
+            color: #209c08;
+        }
+		.row.chart_shiper {padding: 20px;}
+		.progressbar.approve {--fg: #209c08;}
+		.progressbar.disapprove {--fg: #e62d0f;}
+	/* for progress bar show approve or disapproved data End */
+    h2.text.text-primary.postion-heading {
+        position: absolute;
+        top: -11px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+        font-size: 18px;
+        background-color: #f7f9fc;
+        padding: 2px 15px;
+        border-radius: 50px;
+        box-shadow: 0px 0px 11px -10px;
+    }
+div#alluser_wrapper {
+    display: none;
+}
+
+div#shipper_table_wrapper {
+    display: none;
+}
+h2.dashoard-heading {
+    font-size: 18px;
+    color: #434348;
+    font-weight: 700;
+}
+.badge {
+    width: auto !important;
+    padding: 5px 15px !important;
+}
+.updated.badge {
+    background-color: #209c08 !important;
+}
+.created.badge {
+    background-color: #e78612 !important;
+}
+.Login.badge {
+    background-color: #1e55bf !important;
+}
