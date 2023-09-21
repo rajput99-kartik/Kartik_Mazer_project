@@ -704,7 +704,7 @@
                                         <h5>Latest Review</h5>
                                         <div>
                                             <span class="font-weight-bold">Review Type:</span>&nbsp;
-                                            No
+                                            No Testing
                                         </div>
                                         <div>
                                             <span class="font-weight-bold">Review Date:</span>&nbsp;
